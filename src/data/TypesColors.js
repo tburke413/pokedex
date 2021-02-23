@@ -1,0 +1,18 @@
+export const TYPES_COLORS_MAP = [
+  { type: "fire", color: "#dd492c" },
+  { type: "water", color: "#3f3fe2" },
+  { type: "grass", color: "#58e23f" },
+  { type: "electric", color: "#e2d83f" },
+  { type: "normal", color: "#b7b7b7" },
+  { type: "bug", color: "#95ef7f" },
+  { type: "flying", color: "#7e877c" },
+  { type: "psychic", color: "#e4a8f4" },
+  { type: "poison", color: "#a71ace" },
+  { type: "fighting", color: "#c99016" },
+  { type: "rock", color: "#846c37" },
+  { type: "ground", color: "#ba8003" },
+  { type: "dragon", color: "#578df2" },
+  { type: "ice", color: "#a6effc" },
+  { type: "ghost", color: "#bca5c6" },
+  { type: "fairy", color: "#f1d9fc" },
+];
