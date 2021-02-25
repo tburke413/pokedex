@@ -1,12 +1,13 @@
 import React from "react";
 import "./globals.css";
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { TYPES_COLORS_MAP } from "../src/data/TypesColors";
 import Pokemon from "../src/components/Pokemon";
-import PokeProfile from "../src/components/PokeProfile";
+import Profile from "../src/components/Profile";
 import Title from "../src/components/Title";
 import Loading from "../src/components/Loading";
+import Navbar from "../src/components/Navbar";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -42,13 +43,14 @@ function App() {
         <>
           {/* Pokedex List View */}
           <Title />
+          <Navbar />
           {!viewingPokemon && (
             <PokeList>
-              {pokedata.map((p, key) => {
+              {pokedata.map((p, index) => {
                 return (
                   <span onClick={() => openModal(p)}>
                     <Pokemon
-                      key={key}
+                      key={index}
                       onClick={() => openModal(p)}
                       pokemon={p}
                     />
@@ -68,7 +70,7 @@ function App() {
                 )[0].color
               }
             >
-              <PokeProfile selected={selectedPokemon} data={pokedata} />
+              <Profile selected={selectedPokemon} data={pokedata} />
             </PokeModal>
           )}
         </>
@@ -113,6 +115,7 @@ const PokeModal = styled.div`
   justify-content: center;
   margin: 2rem;
   border-radius: 50rem;
+  cursor: pointer;
 `;
 
 const Container = styled.div`

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import padZero from "../utils/padZero";
-import cap from "../utils/cap";
+import { padZero, cap } from "../utils";
 
 const Pokemon = ({ pokemon }) => {
   return (
@@ -9,8 +8,8 @@ const Pokemon = ({ pokemon }) => {
       <Id>
         #{padZero(pokemon.id)} {cap(pokemon.name)}
       </Id>
-      {pokemon.types.map((t) => {
-        return <Type>{cap(t.type.name)}</Type>;
+      {pokemon.types.map((t, index) => {
+        return <Type key={index}>{cap(t.type.name)}</Type>;
       })}
       <Sprite src={pokemon.sprites.front_default} />
     </PokeCard>
@@ -26,6 +25,7 @@ const PokeCard = styled.div`
   margin: 1rem;
   padding-top: 2rem;
   filter: brightness(90%);
+  cursor: pointer;
 
   &:hover {
     filter: brightness(100%);

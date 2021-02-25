@@ -1,13 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const Title = () => {
-  return <Heading>Pokédex</Heading>;
-};
-
-export default Title;
-
-const Heading = styled.h1`
+export const TitleContainer = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
