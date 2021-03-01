@@ -8,4 +8,5 @@ export const TitleContainer = styled.h1`
   width: 100%;
   height: 12.5rem;
   font-size: 3.5rem;
+  /* margin-bottom: 0; */
 `;

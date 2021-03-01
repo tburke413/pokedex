@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { padZero, cap } from "../utils";
+import { useHistory } from "react-router-dom";
 
 const Pokemon = ({ pokemon }) => {
+  let history = useHistory();
+  const goTo = () => {
+    history.push({ pathname: `/pokemon/${pokemon.name}`, state: pokemon });
+  };
   return (
-    <PokeCard>
+    <PokeCard onClick={goTo}>
       <Id>
         #{padZero(pokemon.id)} {cap(pokemon.name)}
       </Id>
