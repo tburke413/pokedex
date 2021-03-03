@@ -1,5 +1,5 @@
 import React from "react";
-import { NavbarContainer } from "./NavbarElements";
+import { NavbarContainer, NavButton } from "./NavbarElements";
 import { useHistory } from "react-router-dom";
 
 const Navbar = () => {
@@ -10,8 +10,8 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <span onClick={() => goTo("/")}>Home</span>
-      <span onClick={() => goTo("/team")}>Team</span>
+      <NavButton onClick={() => goTo("/")}>Home</NavButton>
+      <NavButton onClick={() => goTo("/team")}>Random Team</NavButton>
     </NavbarContainer>
   );
 };
