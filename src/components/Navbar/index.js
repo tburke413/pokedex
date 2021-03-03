@@ -11,6 +11,7 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <NavButton onClick={() => goTo("/")}>Home</NavButton>
+      <NavButton onClick={() => goTo("/trainer")}>Trainer</NavButton>
       <NavButton onClick={() => goTo("/team")}>Random Team</NavButton>
     </NavbarContainer>
   );

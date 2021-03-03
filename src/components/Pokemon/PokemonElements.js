@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const PokeContainer = styled.div`
   width: 225px;
+  height: 300px;
   border: 4px solid #000;
   border-radius: 2rem;
   margin: 1rem;

@@ -16,6 +16,6 @@ export function cap(p) {
 // input: min and max id number of pokemon
 // output: random digit between min and max
 // example: random(1,151)
-export function randomPokemon(min, max) {
+export function randomNums(min, max) {
   return Math.floor(Math.random() * max + min);
 }
