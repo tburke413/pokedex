@@ -1,3 +1,5 @@
+import { TYPES_COLORS_MAP } from "../data/TypesColors";
+
 // input: digit between 1-999
 // output: padded number with preceeding zero's to 3 digits
 // example: '9' --> '009'
@@ -15,7 +17,24 @@ export function cap(p) {
 
 // input: min and max id number of pokemon
 // output: random digit between min and max
-// example: random(1,151)
+// example: random(1,151) --> 54
 export function randomNums(min, max) {
   return Math.floor(Math.random() * max + min);
+}
+
+// input: type name
+// output: mapped type color
+// example: typeMapper('water') --> #3f3fe2
+export function typeMapper(typeName) {
+  // console.log(`typeName: ${typeName.type.name}`);
+  if (typeName) {
+    try {
+      let color = TYPES_COLORS_MAP.filter(
+        (t) => t.type === typeName.type.name
+      )[0].color;
+      return color;
+    } catch {
+      return "#000";
+    }
+  }
 }

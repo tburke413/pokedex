@@ -11,7 +11,7 @@ function Home({ pokedata, isLoaded }) {
       {!isLoaded && <Loading />}
       {isLoaded && (
         <>
-          <Title text="Pokédex" />
+          <Title text="Poké dex Data" />
           <PokeList>
             {pokedata.map((p, index) => {
               return <Pokemon key={index} pokemon={p} />;

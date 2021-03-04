@@ -22,4 +22,16 @@ export const Sprite = styled.img`
   height: 10rem;
 `;
 
-export const Type = styled.p``;
+export const Type = styled.p`
+  background-color: ${(props) => (props.typeBg ? props.typeBg : "black")};
+  border-radius: 5px;
+  width: 5rem;
+  color: #fff;
+  padding: 3px 0px 3px;
+`;
+
+export const TypeContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin: 0rem 1rem 0rem 1rem;
+`;
