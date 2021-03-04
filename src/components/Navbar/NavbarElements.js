@@ -6,7 +6,7 @@ export const NavbarContainer = styled.div`
   align-items: center;
   width: 100vw;
   height: 2.5vh;
-  background-color: #f00;
+  background-color: #ff0102;
   padding: 2.5rem;
 
   @media screen and (max-width: 630px) {
@@ -36,7 +36,7 @@ export const NavButton = styled.button`
 export const PokedexHeader = styled.img`
   height: 10vh;
   width: 100vw;
-  background-color: red;
+  background-color: #eb3223;
   margin-bottom: -5px;
   padding: 0;
   border: 0px;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import Pokemon from "../components/Pokemon";
 import Title from "../components/Title";
 import Loading from "../components/Loading";

@@ -5,7 +5,7 @@ export const ProfileContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 81.5vh;
   color: #fff;
   font-size: 2rem;
   background-color: #a5a5a5;
