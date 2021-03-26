@@ -16,6 +16,7 @@ const Navbar = () => {
         <NavButton onClick={() => goTo("/")}>Home</NavButton>
         <NavButton onClick={() => goTo("/trainer")}>Trainer</NavButton>
         <NavButton onClick={() => goTo("/team")}>Random Team</NavButton>
+        <NavButton onClick={() => goTo("/login")}>Login</NavButton>
       </NavbarContainer>
     </div>
   );

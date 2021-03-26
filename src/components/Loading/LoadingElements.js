@@ -13,5 +13,5 @@ export const LoadingContainer = styled.div`
 export const LoadingGif = styled.img`
   /* background-size */
   height: 40vh;
-  width: 60vw;
+  width: 70vw;
 `;

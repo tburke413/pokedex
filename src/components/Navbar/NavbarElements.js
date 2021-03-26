@@ -25,6 +25,10 @@ export const NavButton = styled.button`
   background: #ffff00;
   box-shadow: 2px 2px;
 
+  &:hover {
+    transform: translateY(1.5px);
+  }
+
   @media screen and (max-width: 630px) {
     display: flex;
     justify-content: center;

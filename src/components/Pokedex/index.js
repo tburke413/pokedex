@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Home from "../../pages/Home";
 import Team from "../../pages/Team";
+import Login from "../../pages/Login";
 import Trainer from "../../pages/Trainer";
 import PokeProfile from "../../pages/PokeProfile";
 import Navbar from "../Navbar";
@@ -14,9 +15,15 @@ const Pokedex = () => {
     async function fetchPokemon() {
       let pokeArray = [];
       for (let i = 151; i > 0; i--) {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
-        const fetchedPokemon = await response.json();
-        pokeArray = [fetchedPokemon, ...pokeArray];
+        try {
+          const response = await fetch(
+            `https://pokeapi.co/api/v2/pokemon/${i}`
+          );
+          const fetchedPokemon = await response.json();
+          pokeArray = [fetchedPokemon, ...pokeArray];
+        } catch (error) {
+          console.log(error);
+        }
       }
       setIsLoaded(true);
       setPokedata(pokeArray);
@@ -42,6 +49,7 @@ const Pokedex = () => {
         <Route path="/team" exact component={withProps(Team, { pokedata })} />
         <Route path="/trainer" exact component={Trainer} />
         <Route path="/pokemon/:pokemon" exact component={PokeProfile} />
+        <Route path="/login" exact component={Login} />
       </Switch>
     </>
   );
