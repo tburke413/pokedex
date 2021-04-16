@@ -5,4 +5,5 @@ export const PokeListContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background: linear-gradient(#fff, #a5a5a5); ;
 `;
