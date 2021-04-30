@@ -14,7 +14,8 @@ const Pokedex = () => {
   useEffect(() => {
     async function fetchPokemon() {
       let pokeArray = [];
-      for (let i = 151; i > 0; i--) {
+      // for (let i = 898; i > 490; i--) {
+      for (let i = 690; i > 490; i--) {
         try {
           const response = await fetch(
             `https://pokeapi.co/api/v2/pokemon/${i}`

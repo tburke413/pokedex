@@ -26,7 +26,6 @@ export function randomNums(min, max) {
 // output: mapped type color
 // example: typeMapper('water') --> #3f3fe2
 export function typeMapper(typeName) {
-  // console.log(`typeName: ${typeName.type.name}`);
   if (typeName) {
     try {
       let color = TYPES_COLORS_MAP.filter(

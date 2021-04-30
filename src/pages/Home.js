@@ -3,6 +3,7 @@ import Pokemon from "../components/Pokemon";
 import Title from "../components/Title";
 import Loading from "../components/Loading";
 import PokeList from "../components/PokeList";
+import OptionsBar from "../components/OptionsBar";
 
 function Home({ pokedata, isLoaded }) {
   return (
@@ -11,6 +12,7 @@ function Home({ pokedata, isLoaded }) {
       {isLoaded && (
         <>
           <Title text="Poké dex Data" />
+          <OptionsBar />
           <PokeList>
             {pokedata.map((p, index) => {
               return <Pokemon key={index} pokemon={p} />;

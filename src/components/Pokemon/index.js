@@ -17,7 +17,6 @@ const Pokemon = ({ pokemon }) => {
       <TypeContainer>
         {pokemon.types.map((currentType, index) => {
           return (
-            // <Type key={index} typeBg={typeMapper(currentType.type.name)}>
             <Type key={index} typeBg={typeMapper(currentType)}>
               {cap(currentType.type.name)}
             </Type>
