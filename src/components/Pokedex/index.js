@@ -14,14 +14,21 @@ const Pokedex = () => {
   useEffect(() => {
     async function fetchPokemon() {
       let pokeArray = [];
-      // for (let i = 898; i > 490; i--) {
-      for (let i = 690; i > 490; i--) {
+      for (let i = 890; i > 0; i--) {
         try {
           const response = await fetch(
             `https://pokeapi.co/api/v2/pokemon/${i}`
           );
-          const fetchedPokemon = await response.json();
-          pokeArray = [fetchedPokemon, ...pokeArray];
+          let fetchedPokemon = await response.json();
+
+          let newThing = {
+            name: fetchedPokemon.name,
+            id: fetchedPokemon.id,
+            types: fetchedPokemon.types,
+            sprites: fetchedPokemon.sprites,
+          };
+
+          pokeArray = [newThing, ...pokeArray];
         } catch (error) {
           console.log(error);
         }

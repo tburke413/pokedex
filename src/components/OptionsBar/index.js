@@ -24,25 +24,40 @@ import {
 const OptionsBar = () => {
   return (
     <OptionsBarContainer>
-      {TYPES_COLORS_MAP.map((p) => {
-        if (p.type == "fire") return <ImFire color={p.color} />;
-        else if (p.type == "water") return <IoWater color={p.color} />;
-        else if (p.type == "grass") return <ImLeaf color={p.color} />;
-        else if (p.type == "electric") return <GiElectric color={p.color} />;
-        else if (p.type == "normal") return <GiAlliedStar color={p.color} />;
-        else if (p.type == "bug") return <AiFillBug color={p.color} />;
-        else if (p.type == "flying") return <GiLibertyWing color={p.color} />;
-        else if (p.type == "psychic") return <FaEye color={p.color} />;
+      {TYPES_COLORS_MAP.map((p, index) => {
+        if (p.type == "fire") return <ImFire key={index} color={p.color} />;
+        else if (p.type == "water")
+          return <IoWater key={index} color={p.color} />;
+        else if (p.type == "grass")
+          return <ImLeaf key={index} color={p.color} />;
+        else if (p.type == "electric")
+          return <GiElectric key={index} color={p.color} />;
+        else if (p.type == "normal")
+          return <GiAlliedStar key={index} color={p.color} />;
+        else if (p.type == "bug")
+          return <AiFillBug key={index} color={p.color} />;
+        else if (p.type == "flying")
+          return <GiLibertyWing key={index} color={p.color} />;
+        else if (p.type == "psychic")
+          return <FaEye key={index} color={p.color} />;
         else if (p.type == "poison")
-          return <FaSkullCrossbones color={p.color} />;
-        else if (p.type == "fighting") return <GiPunch color={p.color} />;
-        else if (p.type == "rock") return <GiMountaintop color={p.color} />;
-        else if (p.type == "ground") return <SiGoogleearth color={p.color} />;
-        else if (p.type == "dragon") return <FaDragon color={p.color} />;
-        else if (p.type == "ice") return <FaRegSnowflake color={p.color} />;
-        else if (p.type == "ghost") return <SiGhostery color={p.color} />;
-        else if (p.type == "fairy") return <GiFairyWand color={p.color} />;
-        else if (p.type == "steel") return <GiMetalScales color={p.color} />;
+          return <FaSkullCrossbones key={index} color={p.color} />;
+        else if (p.type == "fighting")
+          return <GiPunch key={index} color={p.color} />;
+        else if (p.type == "rock")
+          return <GiMountaintop key={index} color={p.color} />;
+        else if (p.type == "ground")
+          return <SiGoogleearth key={index} color={p.color} />;
+        else if (p.type == "dragon")
+          return <FaDragon key={index} color={p.color} />;
+        else if (p.type == "ice")
+          return <FaRegSnowflake key={index} color={p.color} />;
+        else if (p.type == "ghost")
+          return <SiGhostery key={index} color={p.color} />;
+        else if (p.type == "fairy")
+          return <GiFairyWand key={index} color={p.color} />;
+        else if (p.type == "steel")
+          return <GiMetalScales key={index} color={p.color} />;
       })}
     </OptionsBarContainer>
   );
