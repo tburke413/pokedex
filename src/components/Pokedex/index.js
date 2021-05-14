@@ -14,7 +14,7 @@ const Pokedex = () => {
   useEffect(() => {
     async function fetchPokemon() {
       let pokeArray = [];
-      for (let i = 898; i > 880; i--) {
+      for (let i = 898; i > 890; i--) {
         try {
           const response = await fetch(
             `https://pokeapi.co/api/v2/pokemon/${i}`
@@ -25,7 +25,7 @@ const Pokedex = () => {
             name: fetchedPokemon.name,
             id: fetchedPokemon.id,
             types: fetchedPokemon.types,
-            sprites: fetchedPokemon.sprites,
+            sprite_front_default: fetchedPokemon.sprites.front_default,
           };
 
           pokeArray = [newThing, ...pokeArray];
@@ -34,9 +34,17 @@ const Pokedex = () => {
         }
       }
       setIsLoaded(true);
+      localStorage.setItem("pokedexData", JSON.stringify(pokeArray));
       setPokedata(pokeArray);
     }
-    fetchPokemon();
+
+    // check if local save exists
+    const localSave = localStorage.getItem("pokedexData");
+    if (localSave === null) fetchPokemon();
+    else {
+      setIsLoaded(true);
+      setPokedata(JSON.parse(localSave));
+    }
   }, []);
 
   function withProps(Component, props) {

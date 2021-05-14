@@ -13,7 +13,7 @@ const Pokemon = ({ pokemon }) => {
     <PokeContainer onClick={goTo}>
       <h3>#{padZero(pokemon.id)}</h3>
       <h2>{cap(pokemon.name)}</h2>
-      <Sprite src={pokemon.sprites.front_default} />
+      <Sprite src={pokemon.sprite_front_default} />
       <TypeContainer>
         {pokemon.types.map((currentType, index) => {
           return (
