@@ -21,43 +21,164 @@ import {
   GiMetalScales,
 } from "react-icons/gi";
 
-const OptionsBar = () => {
+const OptionsBar = ({ click }) => {
   return (
     <OptionsBarContainer>
       {TYPES_COLORS_MAP.map((p, index) => {
-        if (p.type == "fire") return <ImFire key={index} color={p.color} />;
+        if (p.type == "fire")
+          return (
+            <ImFire
+              key={index}
+              size={35}
+              color={p.color}
+              value={p.type}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "water")
-          return <IoWater key={index} color={p.color} />;
+          return (
+            <IoWater
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "grass")
-          return <ImLeaf key={index} color={p.color} />;
+          return (
+            <ImLeaf
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "electric")
-          return <GiElectric key={index} color={p.color} />;
+          return (
+            <GiElectric
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "normal")
-          return <GiAlliedStar key={index} color={p.color} />;
+          return (
+            <GiAlliedStar
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "bug")
-          return <AiFillBug key={index} color={p.color} />;
+          return (
+            <AiFillBug
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "flying")
-          return <GiLibertyWing key={index} color={p.color} />;
+          return (
+            <GiLibertyWing
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "psychic")
-          return <FaEye key={index} color={p.color} />;
+          return (
+            <FaEye
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "poison")
-          return <FaSkullCrossbones key={index} color={p.color} />;
+          return (
+            <FaSkullCrossbones
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "fighting")
-          return <GiPunch key={index} color={p.color} />;
+          return (
+            <GiPunch
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "rock")
-          return <GiMountaintop key={index} color={p.color} />;
+          return (
+            <GiMountaintop
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "ground")
-          return <SiGoogleearth key={index} color={p.color} />;
+          return (
+            <SiGoogleearth
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "dragon")
-          return <FaDragon key={index} color={p.color} />;
+          return (
+            <FaDragon
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "ice")
-          return <FaRegSnowflake key={index} color={p.color} />;
+          return (
+            <FaRegSnowflake
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "ghost")
-          return <SiGhostery key={index} color={p.color} />;
+          return (
+            <SiGhostery
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "fairy")
-          return <GiFairyWand key={index} color={p.color} />;
+          return (
+            <GiFairyWand
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
         else if (p.type == "steel")
-          return <GiMetalScales key={index} color={p.color} />;
+          return (
+            <GiMetalScales
+              key={index}
+              size={35}
+              color={p.color}
+              onClick={() => click(p.type)}
+            />
+          );
       })}
     </OptionsBarContainer>
   );
