@@ -17,7 +17,7 @@ function Home({ pokedata, isLoaded }) {
   if (filteredType) {
     if (pokedata) {
       pokedata.forEach(function (t) {
-        console.log(t);
+        // console.log(t);
         let include = false;
         t.types.forEach(function (y) {
           if (y.type.name == filteredType) include = true;
