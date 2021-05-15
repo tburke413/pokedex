@@ -35,7 +35,7 @@ function Home({ pokedata, isLoaded }) {
       {isLoaded && (
         <>
           <Title text="Poké dex Data" />
-          <OptionsBar click={filterClick} />
+          <OptionsBar click={filterClick} active={filteredType} />
           <PokeList>
             {filteredList.map((p, index) => {
               return <Pokemon key={index} pokemon={p} />;

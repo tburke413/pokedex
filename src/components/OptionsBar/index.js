@@ -21,7 +21,7 @@ import {
   GiMetalScales,
 } from "react-icons/gi";
 
-const OptionsBar = ({ click }) => {
+const OptionsBar = ({ click, active }) => {
   return (
     <OptionsBarContainer>
       {TYPES_COLORS_MAP.map((p, index) => {
@@ -30,9 +30,10 @@ const OptionsBar = ({ click }) => {
             <ImFire
               key={index}
               size={35}
-              color={p.color}
-              value={p.type}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "water")
@@ -40,8 +41,10 @@ const OptionsBar = ({ click }) => {
             <IoWater
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "grass")
@@ -49,8 +52,10 @@ const OptionsBar = ({ click }) => {
             <ImLeaf
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "electric")
@@ -58,8 +63,10 @@ const OptionsBar = ({ click }) => {
             <GiElectric
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "normal")
@@ -67,8 +74,10 @@ const OptionsBar = ({ click }) => {
             <GiAlliedStar
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "bug")
@@ -76,8 +85,10 @@ const OptionsBar = ({ click }) => {
             <AiFillBug
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "flying")
@@ -85,8 +96,10 @@ const OptionsBar = ({ click }) => {
             <GiLibertyWing
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "psychic")
@@ -94,8 +107,10 @@ const OptionsBar = ({ click }) => {
             <FaEye
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "poison")
@@ -103,8 +118,10 @@ const OptionsBar = ({ click }) => {
             <FaSkullCrossbones
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "fighting")
@@ -112,8 +129,10 @@ const OptionsBar = ({ click }) => {
             <GiPunch
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "rock")
@@ -121,8 +140,10 @@ const OptionsBar = ({ click }) => {
             <GiMountaintop
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "ground")
@@ -130,8 +151,10 @@ const OptionsBar = ({ click }) => {
             <SiGoogleearth
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "dragon")
@@ -139,8 +162,10 @@ const OptionsBar = ({ click }) => {
             <FaDragon
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "ice")
@@ -148,8 +173,10 @@ const OptionsBar = ({ click }) => {
             <FaRegSnowflake
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "ghost")
@@ -157,8 +184,10 @@ const OptionsBar = ({ click }) => {
             <SiGhostery
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "fairy")
@@ -166,8 +195,10 @@ const OptionsBar = ({ click }) => {
             <GiFairyWand
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
         else if (p.type == "steel")
@@ -175,8 +206,10 @@ const OptionsBar = ({ click }) => {
             <GiMetalScales
               key={index}
               size={35}
-              color={p.color}
-              onClick={() => click(p.type)}
+              color={!active ? p.color : active === p.type ? p.color : "grey"}
+              onClick={() => {
+                click(p.type);
+              }}
             />
           );
       })}
