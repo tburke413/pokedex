@@ -20,8 +20,8 @@ const Profile = ({ selected, data, bgc }) => {
 
         let fetchedProfile = await response.json();
         console.log(fetchedProfile);
-        setIsLoaded(true);
         setProfileData(fetchedProfile);
+        setIsLoaded(true);
       } catch (error) {
         console.log(error);
       }
