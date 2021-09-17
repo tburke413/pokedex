@@ -57,15 +57,15 @@ const Trainer = () => {
   };
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     setTrainerInfo({ ...data, trainerImg: trainerImg });
-    console.log(trainerInfo);
+    // console.log(trainerInfo);
   };
 
   const testFunction = async () => {
     const berry = await fetch(`https://pokeapi.co/api/v2/berry/1`);
     const jsonBerry = await berry.json();
-    console.log(jsonBerry);
+    // console.log(jsonBerry);
   };
 
   console.log(watch("example")); // watch input value by passing the name of it

@@ -14,12 +14,20 @@ const Pokedex = () => {
   useEffect(() => {
     async function fetchPokemon() {
       let pokeArray = [];
+      let generations = [];
       for (let i = 898; i > 0; i--) {
         try {
           const response = await fetch(
             `https://pokeapi.co/api/v2/pokemon/${i}`
           );
           let fetchedPokemon = await response.json();
+
+          let games = [];
+          fetchedPokemon.game_indices.map((t) => {
+            games.push(t.version.name);
+            if (!generations.includes(t.version.name))
+              generations.push(t.version.name);
+          });
 
           let newThing = {
             name: fetchedPokemon.name,
@@ -28,13 +36,15 @@ const Pokedex = () => {
             sprite_front_default: fetchedPokemon.sprites.front_default,
             height: fetchedPokemon.height,
             weight: fetchedPokemon.weight,
+            games: games,
           };
-
+          console.log(games);
           pokeArray = [newThing, ...pokeArray];
         } catch (error) {
           console.log(error);
         }
       }
+
       setIsLoaded(true);
       localStorage.setItem("pokedexData", JSON.stringify(pokeArray));
       setPokedata(pokeArray);
